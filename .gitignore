@@ -42,16 +42,17 @@
 /*
 !/*.gitignore
 ##
-!*.qpf
-!*.qsf
-!*.qws
-!*.bdf
-!*.vhd
+*.qpf
+*.qsf
+*.qws
+*.bdf
+*.vhd
 !*.v
-!*.ptf
-!*.bsf
-!**/class.ptf
-!*.tbd
+!*.sv
+*.ptf
+*.bsf
+**/class.ptf
+*.tbd
 !*.sof
 ## tbd
 
