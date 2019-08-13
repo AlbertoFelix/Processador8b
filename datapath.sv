@@ -1,6 +1,3 @@
-`include "registersBankSC/registersBankSC.sv"
-`include "ulaProcSc/ulaProcSc.sv"
-
 module datapath(
 	input logic [7:0] In, CTE,
 	input logic [3:0] SRD, SBA, SBB, SULA,
@@ -8,8 +5,8 @@ module datapath(
 	input logic clk, LE,
 	
 	output logic [7:0] outDataPath,
-	output logic [4:0] outComparator, // Saída para testes de comparação entre palavras.
-	output logic [7:0] outUlaF
+	output logic [4:0] outComparator//, // Saída para testes de comparação entre palavras.
+	//output logic [7:0] outUlaF
 	
 );
 
@@ -26,7 +23,7 @@ registersBankSC bank(outUla[7:0], outUla[15:8], In, clk, SRD, LE, SBA, SBB, outB
 							
 ulaProcSc ula(outMuxA, outMuxB, SULA, outUla);
 
-assign outUlaF = outMuxA;
+//assign outUlaF = outMuxA;
 
 
 
